@@ -14,4 +14,4 @@ def solution(participant, completion):
     return participant[len(participant)-1]
 
 print(solution(["marina", "josipa", "nikola", "vinko", "filipa"]
-, ["josipa", "filipa", "marina", "nikola"]))
+, ["josipa", "filipa", "marina", "nikola"])) 
