@@ -1,5 +1,7 @@
+
 def solution(id_list, report, k):
     answer = [0] * len(id_list)
+    
     # 중복 제거
     result = set(report)
     result = list(result)
@@ -9,17 +11,16 @@ def solution(id_list, report, k):
     for id in id_list:
         dict[id] = []
 
-    # 신고한 유저와 유저가 신고한 아이디 나누기
+    # 신고한 유저와 유저가 신고한 아이디 나누기 
     for i in result:
         show = i.split(" ")
         dict[show[1]] += [show[0]]
-
 
     # k명 이상 신고된 사람 찾기
     for key, value in dict.items():
         if len(value) >= k:
             for person in value:
                 answer[id_list.index(person)] += 1
- 
-
+    
+            
     return answer
